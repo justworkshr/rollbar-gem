@@ -159,6 +159,8 @@ GEM
     nio4r (2.7.5)
     nokogiri (1.19.4-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.19.4-x86_64-linux-gnu)
+      racc (~> 1.4)
     ostruct (0.6.3)
     public_suffix (7.0.5)
     racc (1.8.1)
@@ -295,6 +297,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-25
+  x86_64-linux
 
 DEPENDENCIES
   activerecord-jdbcsqlite3-adapter
