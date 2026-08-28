@@ -28,7 +28,7 @@ describe Rollbar::Middleware::Rack::Builder, :reconfigure_notifier => true do
 
   it 'reports the error to Rollbar' do
     expect(Rollbar).to receive(:log).with(uncaught_level, exception,
-                                          :use_exception_level_filters => true)
+                                          :use_exception_level_filters => true, :uncaught_error => true)
     expect { request.get('/will_crash') }.to raise_error(exception)
   end
 
