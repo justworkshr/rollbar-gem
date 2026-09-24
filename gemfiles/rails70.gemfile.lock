@@ -176,9 +176,9 @@ GEM
       net-protocol
     net-ssh (7.3.3)
     nio4r (2.7.5)
-    nokogiri (1.18.10-arm64-darwin)
+    nokogiri (1.17.2-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-linux-gnu)
+    nokogiri (1.17.2-x86_64-linux)
       racc (~> 1.4)
     ostruct (0.6.3)
     racc (1.8.1)
@@ -320,6 +320,7 @@ DEPENDENCIES
   jruby-openssl
   mime-types
   minitest (< 5.26)
+  nokogiri (< 1.18)
   racc
   rails (~> 7.0.8, < 7.0.10)
   rake
