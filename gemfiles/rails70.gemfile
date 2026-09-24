@@ -6,7 +6,13 @@ is_jruby = defined?(JRUBY_VERSION) || (defined?(RUBY_ENGINE) && RUBY_ENGINE == '
 
 gem 'activerecord-jdbcsqlite3-adapter', :platform => :jruby
 gem 'jruby-openssl', :platform => :jruby
-gem 'rails', '~> 7.0.8'
+# Rails 7.0.10 raises FrozenError during engine initialization.
+gem 'rails', '~> 7.0.8', '< 7.0.10'
+# These bounds retain compatibility with the Ruby 3.0.3 CI row.
+gem 'i18n', '< 1.15'
+gem 'minitest', '< 5.26'
+gem 'nokogiri', '< 1.18'
+gem 'net-imap', '< 0.5'
 gem 'sqlite3', '~> 1.4', :platform => [:ruby, :mswin, :mingw]
 
 gem 'rspec-rails', '~> 6.0.3'
@@ -16,10 +22,9 @@ gem 'rake'
 gem 'sidekiq', '>= 6.4.0'
 
 platforms :rbx do
-  gem 'minitest'
   gem 'racc'
   gem 'rubinius-developer_tools'
-  gem 'rubysl', '~> 2.0' if RUBY_VERSION.start_with?('2')
+  gem 'rubysl', '~> 2.0' if RUBY_ENGINE == 'rbx' && RUBY_VERSION.start_with?('2')
 end
 
 gem 'sucker_punch', '~> 2.0'
@@ -31,7 +36,8 @@ gem 'database_cleaner'
 gem 'delayed_job', '4.1.10', :require => false
 gem 'generator_spec'
 gem 'redis', '<= 4.8.0'
-gem 'resque'
+# Resque 3.0 dropped Rails 7.0 support.
+gem 'resque', '~> 2.7'
 gem 'secure_headers', '~> 6.3.2', :require => false
 gem 'simplecov'
 

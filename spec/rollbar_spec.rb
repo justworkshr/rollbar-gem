@@ -651,7 +651,7 @@ describe Rollbar do
         notifier2 = notifier.scope
 
         notifier2.should_not eq(notifier)
-        notifier2.should be_instance_of(Rollbar::Notifier)
+        notifier2.should be_a(Rollbar::Notifier)
       end
 
       it 'should create a copy of the parent notifier\'s configuration' do

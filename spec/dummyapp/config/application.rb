@@ -1,5 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
+require 'logger' # activesupport <= 6.1 requires this before rails/all (see logger_thread_safe_level.rb)
 require 'rails/all'
 
 Bundler.require

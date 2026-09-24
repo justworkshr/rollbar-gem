@@ -1,3 +1,4 @@
+require 'logger' # activesupport <= 6.1 requires this before rails (see logger_thread_safe_level.rb)
 require 'rails'
 require 'rollbar'
 

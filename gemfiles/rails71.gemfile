@@ -19,7 +19,6 @@ platforms :rbx do
   gem 'minitest'
   gem 'racc'
   gem 'rubinius-developer_tools'
-  gem 'rubysl', '~> 2.0' if RUBY_VERSION.start_with?('2')
 end
 
 gem 'sucker_punch', '~> 2.0'
@@ -31,7 +30,7 @@ gem 'database_cleaner'
 gem 'delayed_job', '4.1.10', :require => false
 gem 'generator_spec'
 gem 'redis', '<= 4.8.0'
-gem 'resque'
+gem 'resque', '< 3.0' # resque 3.0.0 dropped Rails < 7.2 support (resque/resque#1927)
 gem 'secure_headers', '~> 6.3.2', :require => false
 gem 'simplecov'
 
