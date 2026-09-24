@@ -10,8 +10,8 @@ gem 'jruby-openssl', :platform => :jruby
 gem 'rails', '~> 7.0.8', '< 7.0.10'
 # i18n 1.15 requires Ruby >= 3.1, while this matrix includes Ruby 3.0.3.
 gem 'i18n', '< 1.15'
-# minitest 5.26+ requires Ruby >= 3.1, while this matrix includes Ruby 3.0.3.
-gem 'minitest', '< 5.26'
+# minitest 6 requires Ruby >= 3.2, while this matrix includes Ruby 3.0.3.
+gem 'minitest', '< 6'
 gem 'sqlite3', '~> 1.4', :platform => [:ruby, :mswin, :mingw]
 
 gem 'rspec-rails', '~> 6.0.3'
