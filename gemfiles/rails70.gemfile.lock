@@ -161,7 +161,7 @@ GEM
     multi_json (1.19.1)
     mustermann (1.1.2)
       ruby2_keywords (~> 0.0.1)
-    net-imap (0.5.15)
+    net-imap (0.4.25)
       date
       net-protocol
     net-pop (0.1.2)
@@ -320,6 +320,7 @@ DEPENDENCIES
   jruby-openssl
   mime-types
   minitest (< 5.26)
+  net-imap (< 0.5)
   nokogiri (< 1.18)
   racc
   rails (~> 7.0.8, < 7.0.10)

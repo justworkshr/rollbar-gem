@@ -12,6 +12,7 @@ gem 'rails', '~> 7.0.8', '< 7.0.10'
 gem 'i18n', '< 1.15'
 gem 'minitest', '< 5.26'
 gem 'nokogiri', '< 1.18'
+gem 'net-imap', '< 0.5'
 gem 'sqlite3', '~> 1.4', :platform => [:ruby, :mswin, :mingw]
 
 gem 'rspec-rails', '~> 6.0.3'
